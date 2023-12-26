@@ -1,5 +1,5 @@
 ---
-title: "Using Machine Learning to Predict BDD in a Cohort of Individuals with OCD"
+title: "Using Machine Learning to Predict MDD in a Cohort of Individuals with OCD"
 author: "Jorge Valderrama"
 date: "2023-12-26"
 output:
