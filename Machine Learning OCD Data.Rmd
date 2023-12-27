@@ -1,5 +1,5 @@
 ---
-title: "Using Machine Learning to Predict MDD in a Cohort of Individuals with OCD"
+title: "Using Machine Learning to Predict BDD in a Cohort of Individuals with OCD"
 author: "Jorge Valderrama"
 date: "2023-12-26"
 output:
@@ -50,6 +50,7 @@ cormatrix <- cor(OCD %>% keep(is.numeric))
 cormatrix %>% as.data.frame %>% mutate(var2=rownames(.)) %>%
   pivot_longer(!var2, values_to = "value") %>%
   ggplot(aes(x=name,y=var2,fill=abs(value),label=round(value,2))) +
+  theme(axis.text.x=element_text(angle=60, hjust=1))+
   geom_tile() + geom_label() + xlab("") + ylab("") +
   ggtitle("Correlation matrix of our predictors") +
   labs(fill="Correlation\n(absolute):")
@@ -105,6 +106,9 @@ test <- OCD[-split,]
 ```{r}
 #removing MDD as a predictor
 preprocess_data <- function(df){  
+  #normalizing YBOCS_Score variables with log transformation
+  OCD$YBOCS_Score_norm <- log(OCD$YBOCS_SCORE)
+  
   return(df[,names(df)!="MDD"])
 }
 ```
@@ -216,4 +220,7 @@ precision(predictions, y_test)
 recall(predictions, y_test)
 F_meas(predictions, y_test)
 ```
+
+
+
 
