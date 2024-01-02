@@ -3,6 +3,6 @@ Using tidyverse, caret, and party packages in R to develop machine learning algo
 
 I utilized three different machine learning models (random forest, neural network, and Xgboost) to predict major depressive disorder (MDD) among individuals with OCD from the data set I analyzed for one of my publications: Valderrama, J., Hansen, S. K., Pato, C., Phillips, K., Knowles, J., & Pato, M. T. (2020). Greater history of traumatic event exposure and PTSD associated with comorbid body dysmorphic disorder in a large OCD cohort. Psychiatry research, 289, 112962 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9017948/).
 
-The Rmardown (RMD) file includes code to visualize data and run descriptive statistics for  data inspection prior to creating the models. 
+The Rmarkdown (RMD) file includes code to visualize data and run descriptive statistics for data inspection prior to creating the models. 
 
 The powerpoint file with notes walks through the process of exploring the data set and creating the models.
